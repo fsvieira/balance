@@ -1,0 +1,32 @@
+<ion-view title="Ballance: A Logical Puzzle With Balls!!">
+  <ion-content class="has-header padding bg">
+	  <center>
+    <h1>Dificulty Levels</h1>
+    
+	<div class='levels'>
+    <a ng-repeat="(level, w) in levels" class='level' href="#/tab/game" ng-click='setLevel(level)'>
+		<div class='title'>best: {{w===0?"#":w}} weights</div>
+		<div class='number'>{{level}}</div>
+		<br>
+		<center>
+			<div class='star_container'>
+				<div ng-show='w' class='star' ></div>
+				<div ng-show='!w' class='no_star' ></div>
+				<div ng-show='w && w<5' class='star' ></div>
+				<div ng-show='!w || w > 4' class='no_star' ></div>
+				<div ng-show='w && w<4' class='star' ></div>
+				<div ng-show='!w || w > 3' class='no_star' ></div>
+			</div>
+		</center>
+		<br>
+	</a>
+	</div>
+
+	<div class='clear'></div>
+	
+	<div ng-include="'templates/pub.html'"></div>
+
+	</center>
+	
+  </ion-content>
+</ion-view>

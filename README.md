@@ -48,4 +48,10 @@ Some images have a diferent license, so please check the .txt files that came wi
 They are also mention on the help tab of the game.
 
 
-Enjoy the game... 
+Links
+=======
+http://fsvieira.com
+http://projects.fsvieira.com
+
+
+Happy Gamming ;) 

@@ -1,5 +1,9 @@
 /* Empty. Add your own CSS if you like */
 
+.popup {
+	width: 400px;
+}
+
 .bg {
 	background-image: url("../img/svg/bg.svg");
 	background-size: cover;

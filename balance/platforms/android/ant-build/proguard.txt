@@ -1,9 +1,3 @@
 # view AndroidManifest.xml #generated:6
 -keep class com.fsvieira.balance.Balance { <init>(...); }
 
-# view AndroidManifest.xml #generated:14
--keep class com.google.android.gms.ads.AdActivity { <init>(...); }
-
-# view AndroidManifest.xml #generated:12
--keep class com.purplebrain.adbuddiz.sdk.AdBuddizActivity { <init>(...); }
-

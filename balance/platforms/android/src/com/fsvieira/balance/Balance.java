@@ -21,18 +21,13 @@ package com.fsvieira.balance;
 
 import android.os.Bundle;
 import org.apache.cordova.*;
-import com.purplebrain.adbuddiz.sdk.AdBuddiz;
 
 public class Balance extends CordovaActivity 
 {
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
-        super.onCreate(savedInstanceState); 
-        
-        AdBuddiz.setPublisherKey("41e8eeef-548e-4d67-bc10-53f16530d821");
-		AdBuddiz.cacheAds(this); // this = current Activity
-               
+        super.onCreate(savedInstanceState);
         super.init();
         // Set by <content src="index.html" /> in config.xml
         super.loadUrl(Config.getStartUrl());

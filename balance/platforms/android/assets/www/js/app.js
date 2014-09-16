@@ -125,8 +125,6 @@ angular.module('balance', ['ionic'])
 	localStorage["levels"] = JSON.stringify($scope.levels);
 	
 	$scope.score = function (level, w) {
-		console.log($scope.levels[level]);
-		console.log(w);
 		if (($scope.levels[level] ===0) || (w<$scope.levels[level])) {
 			$scope.levels[level] = w;
 			localStorage["levels"] = JSON.stringify($scope.levels);
@@ -140,7 +138,8 @@ angular.module('balance', ['ionic'])
 	localStorage["current_level"] = localStorage["current_level"] || 1;
 	
 }])
-.controller('GameCtrl', ['$scope', '$ionicGesture', '$ionicModal', '$window', function($scope, $ionicGesture, $ionicModal, $window) {
+.controller('GameCtrl', ['$scope', '$ionicGesture', '$ionicModal', '$window', '$ionicPopup', '$http',
+	function($scope, $ionicGesture, $ionicModal, $window, $ionicPopup, $http) {
 	var ball;
 	var levels = {
 		"1" : {
@@ -394,7 +393,7 @@ angular.module('balance', ['ionic'])
 		$scope.game.balls[type]++;
 	};
 
-	function w() {
+	function w () {
 		var out = $scope.game.balls["heavier"]
 		          + $scope.game.balls["lighter"]
 		          + $scope.game.balls["equal"]
@@ -475,13 +474,14 @@ angular.module('balance', ['ionic'])
 	$scope.goLevel = function(level) {
 		$scope.modal.hide();
 		$scope.setLevel(level);
-		// $scope.load();
-		if ($window.pgadbuddiz) {
+		$scope.load();
+		showPub();
+		/*if ($window.pgadbuddiz) {
 			$window.pgadbuddiz.showAd($scope.load, $scope.load);
 		}
 		else {
 			$scope.load();
-		}
+		}*/
 		// $scope.$apply();
 	};
 
@@ -581,10 +581,52 @@ angular.module('balance', ['ionic'])
 			level: level
 		};
 	};
+	
+	function showPub () {
+		if ($scope.system.cordova) {
+			$http({method: 'GET', url: 'https://admin.appnext.com/offerWallApi.aspx?id=aa2f85aa-65e4-46aa-a4ce-ad9b35d78ece&cnt=1&type=json&cat=Board,Puzzle,Action,Adventure,Arcade'})
+				.success(function(data, status, headers, config) {
+				  $scope.pub = data.apps[0];
+				  console.log($scope.pub);
+				  
+/*				  $ionicModal.fromTemplateUrl('templates/win.html', {
+		scope: $scope,
+	}).then(function(modal) {
+		$scope.modal = modal;
+	});*/
+				 var pub = $ionicPopup.show({
+					templateUrl: 'templates/popup_pub.html',
+					title: $scope.pub.title,
+					subTitle: $scope.pub.categories,
+					scope: $scope,
+					buttons: [
+						{ text: 'Close' },
+						{
+							text: '<b>Install</b>',
+							type: 'button-positive',
+							onTap: function(e) {
+								$scope.open($scope.pub.urlApp);
+							}
+						},
+					]
+				  });
+				  
+				  $scope.openPub = function () {
+					 $scope.open($scope.pub.urlApp);
+					 pub.close();
+				  };
+				})
+				.error(function(data, status, headers, config) {
+				  console.log("error");
+				});
+	    }
+   }
+   
+	
 
 }])
+/*
 .controller('PubCtrl', ['$scope', '$http', '$interval', function($scope, $http, $interval) {
-	
 	function get_ad () {
 		$http({method: 'GET', url: 'https://admin.appnext.com/offerWallApi.aspx?id=aa2f85aa-65e4-46aa-a4ce-ad9b35d78ece&cnt=1&type=json&cat=Board,Puzzle,Action,Adventure,Arcade'})
 			.success(function(data, status, headers, config) {
@@ -611,6 +653,7 @@ angular.module('balance', ['ionic'])
 		}
     });
 
-}]);
+}])
+*/
 ;
 

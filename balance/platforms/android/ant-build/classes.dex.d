@@ -1,4 +1,18 @@
 /home/fsvieira/data/projects/apps/balance-git/balance/platforms/android/ant-build/classes.dex : \
+/home/fsvieira/data/projects/apps/balance-git/balance/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser.class \
+/home/fsvieira/data/projects/apps/balance-git/balance/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowserDialog.class \
+/home/fsvieira/data/projects/apps/balance-git/balance/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$3.class \
+/home/fsvieira/data/projects/apps/balance-git/balance/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$3.class \
+/home/fsvieira/data/projects/apps/balance-git/balance/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$InAppBrowserClient.class \
+/home/fsvieira/data/projects/apps/balance-git/balance/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5.class \
+/home/fsvieira/data/projects/apps/balance-git/balance/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$4.class \
+/home/fsvieira/data/projects/apps/balance-git/balance/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$1.class \
+/home/fsvieira/data/projects/apps/balance-git/balance/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$1.class \
+/home/fsvieira/data/projects/apps/balance-git/balance/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$2.class \
+/home/fsvieira/data/projects/apps/balance-git/balance/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$4.class \
+/home/fsvieira/data/projects/apps/balance-git/balance/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$2.class \
+/home/fsvieira/data/projects/apps/balance-git/balance/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$4$1.class \
+/home/fsvieira/data/projects/apps/balance-git/balance/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppChromeClient.class \
 /home/fsvieira/data/projects/apps/balance-git/balance/platforms/android/ant-build/classes/com/fsvieira/balance/R$string.class \
 /home/fsvieira/data/projects/apps/balance-git/balance/platforms/android/ant-build/classes/com/fsvieira/balance/R.class \
 /home/fsvieira/data/projects/apps/balance-git/balance/platforms/android/ant-build/classes/com/fsvieira/balance/R$attr.class \

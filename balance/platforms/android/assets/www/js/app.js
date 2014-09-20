@@ -75,7 +75,7 @@ angular.module('balance', ['ionic'])
     
     $urlRouterProvider.otherwise('/tab/dash');
 })
-.controller('MainCtrl', ['$scope', function($scope) {
+.controller('MainCtrl', ['$scope', '$window', function($scope, $window) {
 	$scope.error_msg = "";
 	$scope.error = function (err) {
 		$scope.error_msg = err;
@@ -86,7 +86,7 @@ angular.module('balance', ['ionic'])
 	};
 	
 	$scope.open = function (urlApp) {
-		window.open(urlApp,'_system','location=yes');
+		$window.open(urlApp,'_system','location=yes');
 		return false;
 	};	
 	

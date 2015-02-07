@@ -50,8 +50,8 @@ They are also mention on the help tab of the game.
 
 Links
 =======
-http://fsvieira.com
-http://projects.fsvieira.com
+* http://fsvieira.com
+* http://fsvieira.com/balance/#/tab/dash
 
 
 Happy Gamming ;) 

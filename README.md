@@ -14,10 +14,10 @@ and if it is heavier or lighter than the others. You have to find this out with 
 Try the game
 =======
 
-The game is available online here: http://balance.fsvieira.com, or for android here: https://play.google.com/store/apps/details?id=com.fsvieira.balance
+The game is available online here: http://fsvieira.com/balance, or for android here: https://play.google.com/store/apps/details?id=com.fsvieira.balance
 
 
-Run it youerself
+Run it yourself
 =======
 
 You can run the game by going to folder balance, then you can the game using ionic (http://ionicframework.com/):

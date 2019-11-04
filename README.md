@@ -14,7 +14,7 @@ and if it is heavier or lighter than the others. You have to find this out with 
 Try the game
 =======
 
-The game is available online here: http://fsvieira.com/balance, or for android here: https://play.google.com/store/apps/details?id=com.fsvieira.balance
+The game is available online here: https://fsvieira.github.io/balance/#/tab/dash, or for android here: https://play.google.com/store/apps/details?id=com.fsvieira.balance
 
 
 Run it yourself

@@ -35,7 +35,7 @@ To run android emulator (you need android dev tools):
 You can also just serve the www folder with other server like apache, its how I run it on my website.
 
 
-Older Version (NO LONGER ONLINE)
+Older Version
 =======
 My first version of the game made for Caannoo (https://dl.openhandhelds.org/cgi-bin/caanoo.cgi?0,0,0,0,3,813), it has a diferente interface, with this new version 
 I wanted to try a more clean and compact interface that maybe its too abstract but in some ways I think its better and

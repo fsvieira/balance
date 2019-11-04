@@ -475,14 +475,6 @@ angular.module('balance', ['ionic'])
 		$scope.modal.hide();
 		$scope.setLevel(level);
 		$scope.load();
-		showPub();
-		/*if ($window.pgadbuddiz) {
-			$window.pgadbuddiz.showAd($scope.load, $scope.load);
-		}
-		else {
-			$scope.load();
-		}*/
-		// $scope.$apply();
 	};
 
 	$scope.weight = function () {
@@ -581,79 +573,5 @@ angular.module('balance', ['ionic'])
 			level: level
 		};
 	};
-	
-	function showPub () {
-		if ($scope.system.cordova) {
-			$http({method: 'GET', url: 'https://admin.appnext.com/offerWallApi.aspx?id=aa2f85aa-65e4-46aa-a4ce-ad9b35d78ece&cnt=1&type=json&cat=Board,Puzzle,Action,Adventure,Arcade'})
-				.success(function(data, status, headers, config) {
-				  $scope.pub = data.apps[0];
-				  console.log($scope.pub);
-				  
-/*				  $ionicModal.fromTemplateUrl('templates/win.html', {
-		scope: $scope,
-	}).then(function(modal) {
-		$scope.modal = modal;
-	});*/
-				 var pub = $ionicPopup.show({
-					templateUrl: 'templates/popup_pub.html',
-					title: $scope.pub.title,
-					subTitle: $scope.pub.categories,
-					scope: $scope,
-					buttons: [
-						{ text: 'Close' },
-						{
-							text: '<b>Install</b>',
-							type: 'button-positive',
-							onTap: function(e) {
-								$scope.open($scope.pub.urlApp);
-							}
-						},
-					]
-				  });
-				  
-				  $scope.openPub = function () {
-					 $scope.open($scope.pub.urlApp);
-					 pub.close();
-				  };
-				})
-				.error(function(data, status, headers, config) {
-				  console.log("error");
-				});
-	    }
-   }
-   
-	
-
-}])
-/*
-.controller('PubCtrl', ['$scope', '$http', '$interval', function($scope, $http, $interval) {
-	function get_ad () {
-		$http({method: 'GET', url: 'https://admin.appnext.com/offerWallApi.aspx?id=aa2f85aa-65e4-46aa-a4ce-ad9b35d78ece&cnt=1&type=json&cat=Board,Puzzle,Action,Adventure,Arcade'})
-			.success(function(data, status, headers, config) {
-			  $scope.data = data;
-			})
-			.error(function(data, status, headers, config) {
-			  console.log("error");
-			});
-	};
-	
-	$scope.open = function (urlApp) {
-		window.open(urlApp,'_system','location=yes');
-		return false;
-	};	
-	
-	get_ad();
-	
-	var stop = $interval(get_ad, 1000*30);
-
-	$scope.$on('$destroy', function() {
-		if (angular.isDefined(stop)) {
-			$interval.cancel(stop);
-			stop = undefined;
-		}
-    });
-
-}])
-*/
-;
+}]);
 
